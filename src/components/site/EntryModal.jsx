@@ -115,7 +115,7 @@ export function EntryModal() {
                 collaboration with Sharon Zhang, Ryan Horne, and Nathan
                 Michalewicz. The data is available at{" "}
                 <a
-                  href="https://github.com/YellowRiverDatabase/geodata/tree/main/relational-data"
+                  href="https://github.com/TracksOfYu/geodata/tree/main/relational-data"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -124,7 +124,7 @@ export function EntryModal() {
                 For more information on this project and how to use this data,
                 please see the{" "}
                 <a
-                  href="https://github.com/YellowRiverDatabase/Documentation/blob/main/release_notes.md"
+                  href="https://github.com/TracksOfYu/Documentation"
                   target="_blank"
                   rel="noreferrer"
                 >

@@ -52,7 +52,7 @@ export function Header() {
     },
     {
       name: "Data on GitHub",
-      path: "https://github.com/YellowRiverDatabase/geodata/tree/main/relational-datadata",
+      path: "https://github.com/TracksOfYu/geodata/tree/main/relational-data",
       newTab: true,
     },
   ];

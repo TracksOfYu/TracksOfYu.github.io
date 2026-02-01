@@ -12,7 +12,7 @@ export function Events() {
     if (events.length === 0) {
       const fetchData = async () => {
         const res = await fetch(
-          "https://raw.githubusercontent.com/YellowRiverDatabase/geodata/refs/heads/main/atlas_data/yrdb_events.json"
+          "https://raw.githubusercontent.com/TracksOfYu/geodata/refs/heads/main/atlas_data/yrdb_events.json",
         );
         const data = await res.json();
         console.log("event data", data);

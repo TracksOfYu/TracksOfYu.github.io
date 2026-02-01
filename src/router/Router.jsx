@@ -13,7 +13,7 @@ export function Router() {
         element={
           <MkDownTemplate
             url={
-              "https://raw.githubusercontent.com/YellowRiverDatabase/Documentation/refs/heads/main/database-history.md"
+              "https://raw.githubusercontent.com/TracksOfYu/Documentation/refs/heads/main/database-history.md"
             }
           />
         }
@@ -23,7 +23,7 @@ export function Router() {
         element={
           <MkDownTemplate
             url={
-              "https://raw.githubusercontent.com/YellowRiverDatabase/Documentation/refs/heads/main/table-descriptions.md"
+              "https://raw.githubusercontent.com/TracksOfYu/Documentation/refs/heads/main/table-descriptions.md"
             }
           />
         }
@@ -33,7 +33,7 @@ export function Router() {
         element={
           <MkDownTemplate
             url={
-              "https://raw.githubusercontent.com/YellowRiverDatabase/Documentation/refs/heads/main/how-to-build.md"
+              "https://raw.githubusercontent.com/TracksOfYu/Documentation/refs/heads/main/how-to-build.md"
             }
           />
         }

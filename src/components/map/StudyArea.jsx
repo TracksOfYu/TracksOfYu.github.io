@@ -12,7 +12,7 @@ export function StudyArea() {
       // console.log("fetching");
       const fetchData = async () => {
         const res = await fetch(
-          "https://raw.githubusercontent.com/YellowRiverDatabase/geodata/main/cultural_data/studyarea.geojson"
+          "https://raw.githubusercontent.com/TracksOfYu/geodata/refs/heads/main/cultural_data/studyarea.geojson",
         );
         const data = await res.json();
         setStudyBorder(data);

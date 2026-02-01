@@ -9,7 +9,7 @@ export function useDynEras() {
     const fetchDynEras = async () => {
       if (Object.keys(dynasties).length === 0) {
         const resDynasties = await fetch(
-          "https://raw.githubusercontent.com/YellowRiverDatabase/geodata/main/relational-datadata/dynasties.geojson?token=GHSAT0AAAAAACGFEEKKSQU7WGR7IYU5S26UZGVEODA"
+          "https://raw.githubusercontent.com/TracksOfYu/geodata/refs/heads/main/relational-data/dynasties.geojson",
         );
         const dynasties = await resDynasties.json();
         const dynObj = {};
@@ -25,7 +25,7 @@ export function useDynEras() {
       }
       if (Object.keys(eras).length === 0) {
         const resEras = await fetch(
-          "https://raw.githubusercontent.com/YellowRiverDatabase/geodata/main/relational-datadata/eras.geojson?token=GHSAT0AAAAAACGFEEKKQGFQ6VWXB3LUMO7CZGVESPQ"
+          "https://raw.githubusercontent.com/TracksOfYu/geodata/refs/heads/main/relational-data/eras.geojson",
         );
         const eras = await resEras.json();
         const erasObj = {};

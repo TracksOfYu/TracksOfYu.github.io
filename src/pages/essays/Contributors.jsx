@@ -43,13 +43,13 @@ export function Contributors() {
   const images = [
     {
       name: "Ruth Mostern",
-      url: "https://www.history.pitt.edu/sites/default/files/person-images/May%202023%20Mostern%20headshot%20cropped%20%281%29.jpeg",
+      url: "/mostern_image.jpeg",
       description: "Project Manager",
       info: "Ruth Mostern is Professor of History and Director of the Institute for Spatial History Innovation at the University of Pittsburgh, and Vice President and President Elect of the World History Association. She directed the Pitt World History Center from 2018 to 2025. She is the author of two single-authored books: Dividing the Realm in Order to Govern: The Spatial Organization of the Song State, 960-1276 CE (Harvard Asia Center, 2011), and The Yellow River: A Natural and Unnatural History (Yale University Press, 2021), winner of the Joseph Levenson Prize from the Association for Asian Studies in 2022.  She is also co-editor of Placing Names: Enriching and Integrating Gazetteers (Indiana University Press, 2016), and of a special issue of Open Rivers Journal (2017).  She is the author or co-author of over thirty articles published in books and peer reviewed journals.  Ruth is Principal Investigator and Project Director of the World Historical Gazetteer, a prize-winning digital infrastructure platform for integrating databases of historical place name information. ",
     },
     {
       name: "Nathan Michalewicz",
-      url: "https://www.worldhistory.pitt.edu/sites/default/files/nkm.jpg",
+      url: "/nkm.jpg",
       description: "Web Atlas Designer",
       info: "Nathan Michalewicz is an Assistant Professor of History at Queens University of Charlotte. He received his Ph.D. at George Mason University, specializing in early modern Europe and digital history. He held a post doctoral position at the University of Pittsburgh, working on the World Historical Gazetteer and teaching courses on geo-spatial history. His research interests focus on Christian-Muslim interactions as well as the intersection of data analytics, information management, and history.",
     },
@@ -61,7 +61,7 @@ export function Contributors() {
     },
     {
       name: "Sharon Zhang",
-      url: "https://www.history.pitt.edu/sites/default/files/person-images/Zhang.jpg",
+      url: "/zhang.jpg",
       description: "Chinese Data Expert",
       info: "Sharon Zhang is a Ph.D. candidate in History at the University of Pittsburgh. Her dissertation investigates material and cultural exchanges involved in gift-giving rituals between China and the wider world, particularly Europe, during the Mongol-Yuan era of the 13th-14th centuries. Her research examines how the circulation of tributary gifts facilitated the formation of transregional networks and influenced power dynamics in the global medieval world. Sharon’s broader academic interests extend to Sino-foreign interactions during China’s middle period (circa 800-1400), the experiences of medieval Eurasian travelers along both overland and maritime Silk Routes, and spatial and digital approaches for premodern history studies.",
     },

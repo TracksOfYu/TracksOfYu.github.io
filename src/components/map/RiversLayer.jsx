@@ -18,7 +18,7 @@ export function RiversLayer() {
       // console.log("fetching");
       const fetchData = async () => {
         const res = await fetch(
-          "https://raw.githubusercontent.com/YellowRiverDatabase/geodata/main/physical_data/yellow-river-course-changes.geojson"
+          "https://raw.githubusercontent.com/TracksOfYu/geodata/refs/heads/main/physical_data/yellow-river-course-changes.geojson",
         );
         const data = await res.json();
         setrivers(data.features);

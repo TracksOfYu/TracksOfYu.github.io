@@ -31,7 +31,7 @@ export function NavMenu() {
   ];
 
   const menuItems = menuItemsArray.filter(
-    (item) => item.path !== location.pathname
+    (item) => item.path !== location.pathname,
   );
   const StyledMenu = styled.div`
     position: absolute;
@@ -77,7 +77,7 @@ export function NavMenu() {
           </Link>
         ))}
         <a
-          href="https://github.com/orgs/YellowRiverDatabase/repositories"
+          href="https://github.com/orgs/TracksOfYu/repositories"
           target="_blank"
           rel="noopener noreferrer"
         >
