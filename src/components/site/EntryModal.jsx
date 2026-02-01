@@ -128,7 +128,7 @@ export function EntryModal() {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  release document.
+                  documentation.
                 </a>
               </p>
               <p>
