@@ -3,6 +3,7 @@ import { log } from "deck.gl";
 import { atom, selector } from "recoil";
 import { booleanPointInPolygon } from "@turf/boolean-point-in-polygon";
 import { point, polygon } from "@turf/helpers";
+import { typeOf } from "maplibre-gl";
 
 export const viewState = atom({
   key: "viewState",
@@ -114,7 +115,6 @@ export const riverRoutesState = selector({
   get: ({ get }) => {
     const rivers = get(riversState);
     const [start, end] = get(yearsState);
-    // // console.log(rivers);
     return rivers.filter((r) => {
       return end > r.properties.yearstart && start < r.properties.yearend;
     });
@@ -143,9 +143,7 @@ export const eventsInStudyAreaState = selector({
       return events;
     }
     const studyArea = studyBorder?.features?.[0];
-    console.log("borderFeature features:", studyArea);
     const filtered = events.filter((e) => {
-      // console.log("e:", e);
       const pt = point([e.lat, e.long]);
       return booleanPointInPolygon(pt, studyArea);
     });
@@ -157,7 +155,6 @@ export const eventState1 = selector({
   key: "eventState1",
   get: ({ get }) => {
     const ev = get(eventsInStudyAreaState);
-    console.log("ev:", ev);
     const newEv = [];
     // ev.forEach((e) => {
     //   const events = e.events;
@@ -205,8 +202,6 @@ export const filteredEventsState = selector({
   get: ({ get }) => {
     const ev = get(eventState1);
     // const newEv = get(eventState1);
-    // // console.log("ev:", ev);
-    // console.log("newEv:", ev);
     const [start, end] = get(yearsState);
     const type = get(typesState);
     const type1 = Object.keys(type).filter((t) => type[t]);
@@ -215,7 +210,6 @@ export const filteredEventsState = selector({
       const eventsArray = e.events.filter((d) => {
         // const arr = Object.keys(d);
         if (typeArray.length === 0) {
-          // // console.log("d", d.length);
           return end > d.en_date_start && start < d.en_date_start;
         }
         if (typeArray.length > 0) {
@@ -231,7 +225,6 @@ export const filteredEventsState = selector({
     const filtered = updatedEv.filter((e) => {
       return e.events.length > 0 && e.place_class !== "administrative units";
     });
-    // console.log("filtered:", filtered);
     return filtered;
   },
 });
@@ -243,7 +236,6 @@ export const groupedEventsState = selector({
     const events = [];
     places.forEach((p) => events.push(...p.events.flat()));
     // events.sort((a, b) => a.en_date_start - b.en_date_start);
-    // console.log("individual events:", events);
     const grouped = Array.from(
       group(events, (d) => d.en_date_start),
       ([key, value]) => ({
@@ -293,6 +285,7 @@ export const regime_dates = {
   Tang: [618, 906],
   Song: [960, 1127], // Northern Song
   "North and South Dynasties": [220, 618],
+  Jin: [1115, 1234],
 };
 
 export const upstreamChoicesState = atom({
@@ -313,7 +306,7 @@ export const upstreamDataState = selector({
     const trueOptions = Object.entries(options)
       .filter(([key, value]) => value === true)
       .map(([key, value]) => key);
-    return upstream.filter((d) => {
+    const newUpstream = upstream.filter((d) => {
       for (let regime of trueOptions) {
         if (
           d.date >= regime_dates[regime][0] &&
@@ -325,5 +318,7 @@ export const upstreamDataState = selector({
         }
       }
     });
+      return newUpstream;
   },
 });
+
